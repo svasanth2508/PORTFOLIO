@@ -87,7 +87,7 @@ GitHub: https://github.com/svasanth2508
 - 💬 **WhatsApp**: [+91 73057 53500](https://wa.me/917305753500?text=Hi%20Vasanth,%20I%20am%20reaching%20out%20from%20your%20portfolio.)
 - 💼 **LinkedIn**: [vasanth-sakthivel-05ba25396](https://linkedin.com/in/vasanth-sakthivel-05ba25396)
 - 🐙 **GitHub Profile**: [@svasanth2508](https://github.com/svasanth2508)
-- 🤵**Portfolio**:[VASANTH S](https://github.com/svasanth2508/vasanth-portfolio.git)
+- 🤵**Portfolio**:[VASANTH S](https://svasanth2508.github.io/PORTFOLIO/)
 
 ---
 
