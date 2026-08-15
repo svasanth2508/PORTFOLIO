@@ -79,41 +79,7 @@ GitHub: https://github.com/svasanth2508
 | **Full-Stack & Backend** | Node.js, Express.js, Firebase, REST APIs, HTML5 Web Storage |
 | **DevOps & Server** | Node.js static proxy server (`server.js`) on Port 3000 |
 
----
-
-## 💻 Local Development Setup
-
-To run this portfolio repository locally:
-
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-
-### Step-by-Step Execution
-
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/svasanth2508/vasanth-portfolio.git
-   cd vasanth-portfolio
-   ```
-
-2. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Start Development Server**:
-   ```bash
-   npm start
-   ```
-   *or*
-   ```bash
-   node server.js
-   ```
-
-4. **Access Preview**:
-   Open your browser and navigate to `http://localhost:3000`.
-
----
+--- 
 
 ## 📬 Contact & Connect
 
@@ -121,6 +87,7 @@ To run this portfolio repository locally:
 - 💬 **WhatsApp**: [+91 73057 53500](https://wa.me/917305753500?text=Hi%20Vasanth,%20I%20am%20reaching%20out%20from%20your%20portfolio.)
 - 💼 **LinkedIn**: [vasanth-sakthivel-05ba25396](https://linkedin.com/in/vasanth-sakthivel-05ba25396)
 - 🐙 **GitHub Profile**: [@svasanth2508](https://github.com/svasanth2508)
+- 🤵**Portfolio**:[VASANTH S](https://github.com/svasanth2508/vasanth-portfolio.git)
 
 ---
 
