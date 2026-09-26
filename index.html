@@ -4,62 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Vasanth S | ECE, Computer Vision, Embedded IoT & Full-Stack</title>
-
+  <title>Vasanth S | ECE • Computer Vision • Embedded IoT • Full-Stack</title>
   <meta
     name="description"
-    content="Portfolio of Vasanth S, an Electronics and Communication Engineering undergraduate building computer vision, embedded IoT and full-stack systems including PlateScope, AstraGuard, RESILIENT_AI_SIH and SECAPMS."
+    content="Engineering portfolio of Vasanth S, an Electronics and Communication Engineering undergraduate building computer vision, embedded IoT and full-stack systems including PlateScope, AstraGuard, RESILIENT_AI_SIH and SECAPMS."
   />
   <meta name="author" content="Vasanth S" />
-  <meta
-    name="keywords"
-    content="Vasanth S, ECE, Computer Vision, AI, PlateScope, ANPR, YOLO, PaddleOCR, OpenCV, FastAPI, React, TypeScript, ESP32, IoT, Embedded Systems"
-  />
-  <meta name="theme-color" content="#060a12" />
+  <meta name="theme-color" content="#070b12" />
 
   <link rel="canonical" href="https://svasanth2508.github.io/PORTFOLIO/" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta
-    property="og:title"
-    content="Vasanth S | ECE, Computer Vision, Embedded IoT & Full-Stack"
-  />
+  <meta property="og:title" content="Vasanth S | Engineering Mission Control" />
   <meta
     property="og:description"
-    content="Engineering portfolio covering computer vision, embedded IoT, intelligent software and full-stack systems."
+    content="Computer Vision • Embedded IoT • Full-Stack Engineering"
   />
   <meta property="og:url" content="https://svasanth2508.github.io/PORTFOLIO/" />
 
-  <!-- Add this only after an og-image.png file actually exists in the repository root.
-  <meta
-    property="og:image"
-    content="https://svasanth2508.github.io/PORTFOLIO/og-image.png"
-  />
-  -->
-
-  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta
-    name="twitter:title"
-    content="Vasanth S | ECE, Computer Vision, Embedded IoT & Full-Stack"
-  />
+  <meta name="twitter:title" content="Vasanth S | Engineering Mission Control" />
   <meta
     name="twitter:description"
-    content="Portfolio showcasing computer vision, embedded IoT and full-stack engineering projects."
+    content="Computer Vision • Embedded IoT • Full-Stack Engineering"
   />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
     rel="stylesheet"
   />
 
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -73,11 +51,11 @@
     ],
     "knowsAbout": [
       "Computer Vision",
-      "Artificial Intelligence",
       "Embedded Systems",
       "Internet of Things",
       "Full-Stack Development",
       "YOLO",
+      "PaddleOCR",
       "OpenCV",
       "FastAPI",
       "React",
@@ -87,1574 +65,828 @@
   </script>
 </head>
 
-<body class="tech-boom">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Background -->
-  <canvas id="mouseCanvas" class="mouse-canvas" aria-hidden="true"></canvas>
-  <div class="tech-grid-overlay" aria-hidden="true"></div>
-  <div class="mouse-spotlight" id="mouseSpotlight" aria-hidden="true"></div>
-
-  <!-- Custom Cursor -->
-  <div class="custom-cursor" id="customCursor" aria-hidden="true">
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
-  </div>
+  <canvas id="ambientCanvas" class="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="mouse-glow" id="mouseGlow" aria-hidden="true"></div>
 
   <!-- =========================================================
        HEADER
   ========================================================== -->
-  <header class="header" id="top">
-    <a href="#top" class="logo" aria-label="Vasanth portfolio home">
-      <span class="logo-symbol">&lt;/&gt;</span>
-      VASANTH<span class="blue-dot">.</span>
+  <header class="topbar" id="top">
+    <a href="#overview" class="brand" aria-label="Vasanth S portfolio home">
+      <span class="brand-mark">VS</span>
+      <span class="brand-copy">
+        <strong>VASANTH.S</strong>
+        <small>ENGINEERING SYSTEM</small>
+      </span>
     </a>
 
-    <nav class="nav" id="navMenu" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#github">GitHub</a>
-      <a href="#education">Education</a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#overview">Overview</a>
+      <a href="#system-map">System Map</a>
+      <a href="#work">Work</a>
+      <a href="#build-log">Build Log</a>
+      <a href="#credentials">Credentials</a>
       <a href="#contact">Contact</a>
     </nav>
 
-    <div class="header-actions">
-      <button class="resume-quick-btn" id="openResumeModal" aria-label="View Resume">
-        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-          <polyline points="14 2 14 8 20 8"></polyline>
-          <line x1="16" y1="13" x2="8" y2="13"></line>
-          <line x1="16" y1="17" x2="8" y2="17"></line>
-        </svg>
-        <span>Resume</span>
-      </button>
-
-      <button
-        class="theme-toggle"
-        id="themeToggle"
-        aria-label="Switch theme"
-        aria-pressed="false"
-      >
-        <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
-        </svg>
-        <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true" hidden>
-          <circle cx="12" cy="12" r="4"></circle>
-          <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
-        </svg>
-      </button>
-
-      <button
-        class="menu-toggle"
-        id="menuToggle"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="navMenu"
-      >
+    <div class="topbar-actions">
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle theme">
         <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M3 6h18M3 12h18M3 18h18"></path>
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
         </svg>
+      </button>
+
+      <button class="command-button" id="commandButton" type="button">
+        <span>Command</span>
+        <kbd>Ctrl K</kbd>
+      </button>
+
+      <button
+        class="mobile-menu-button"
+        id="mobileMenuButton"
+        type="button"
+        aria-label="Open navigation"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <main id="main">
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="#overview">Overview</a>
+    <a href="#system-map">System Map</a>
+    <a href="#work">Work</a>
+    <a href="#build-log">Build Log</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
+  <main id="main">
     <!-- =======================================================
-         HERO
+         OVERVIEW / HERO
     ======================================================== -->
-    <section class="hero section" id="hero">
-      <div class="hero-text reveal">
-        <div class="status-badge">
-          <span class="status-ping"></span>
-          <span class="status-text">
-            ECE • COMPUTER VISION • EMBEDDED IoT • FULL-STACK
-          </span>
+    <section class="section hero" id="overview" data-section-name="OVERVIEW">
+      <div class="hero-copy reveal">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          SYSTEM / VASANTH.S / ONLINE
         </div>
 
         <h1>
-          Engineering systems that
-          <span class="blue-glow-text">see, analyze &amp; respond.</span>
+          I build systems that
+          <span>see, sense &amp; respond.</span>
         </h1>
 
-        <p class="hero-description">
-          Electronics &amp; Communication Engineering undergraduate building
-          <strong>computer-vision systems</strong>,
-          <strong>embedded &amp; IoT platforms</strong>, and
-          <strong>full-stack applications</strong>.
-          My recent work includes <strong>PlateScope</strong>, an intelligent
-          ANPR platform using YOLO and PaddleOCR to recognize vehicle
-          registration numbers from traffic video.
+        <p class="hero-lead">
+          Electronics &amp; Communication Engineering undergraduate combining
+          <strong>computer vision</strong>, <strong>embedded IoT</strong> and
+          <strong>full-stack engineering</strong> to turn real-world signals
+          into usable software systems.
         </p>
 
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">
-            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
-            Explore Projects
+        <div class="hero-actions">
+          <a class="button primary" href="#work">
+            Explore Engineering
+            <span aria-hidden="true">↘</span>
           </a>
 
-          <button class="btn btn-secondary" id="heroResumeBtn">
-            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-              <polyline points="7 10 12 15 17 10"></polyline>
-              <line x1="12" y1="15" x2="12" y2="3"></line>
-            </svg>
-            Interactive Resume
+          <button class="button secondary" type="button" data-project="platescope">
+            Inspect PlateScope
           </button>
 
           <a
+            class="button ghost"
             href="https://github.com/svasanth2508"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-ghost"
           >
-            <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77"></path>
-            </svg>
-            GitHub Profile ↗
+            GitHub ↗
           </a>
         </div>
 
-        <div class="stats-grid" role="list">
-          <div class="stat-card panel" role="listitem">
-            <div class="stat-header">
-              <span class="stat-num">8.005</span>
-              <span class="stat-unit">/10</span>
-            </div>
-            <p>Current CGPA</p>
+        <div class="hero-proof">
+          <div>
+            <span class="proof-value">ECE</span>
+            <span class="proof-label">Core discipline</span>
           </div>
-
-          <div class="stat-card panel" role="listitem">
-            <div class="stat-header">
-              <span class="stat-num">AI + IoT</span>
-            </div>
-            <p>Engineering Focus</p>
+          <div>
+            <span class="proof-value">4</span>
+            <span class="proof-label">Selected systems</span>
           </div>
-
-          <div class="stat-card panel" role="listitem">
-            <div class="stat-header">
-              <span class="stat-num">2025–29</span>
-            </div>
-            <p>B.E. ECE Batch</p>
+          <div>
+            <span class="proof-value">8.005</span>
+            <span class="proof-label">Current CGPA / 10</span>
           </div>
         </div>
       </div>
 
-      <div class="hero-visual reveal delay-1">
-        <div class="profile-card panel spotlight-card">
-          <div class="corner-tag">SYS.PROFILE_ECE</div>
-
-          <div class="radar-scan-container" aria-hidden="true">
-            <div class="radar-line"></div>
-            <div class="profile-avatar">
-              <span>VS</span>
-            </div>
-          </div>
-
-          <h2>VASANTH S</h2>
-
-          <p class="profile-title">
-            B.E. Electronics &amp; Communication Engineering
-          </p>
-
-          <p class="profile-college">
-            VSB Engineering College (Batch 2025 – 2029)
-          </p>
-
-          <div class="tags">
-            <span>Python</span>
-            <span>YOLO</span>
-            <span>OpenCV</span>
-            <span>ESP32</span>
-            <span>FastAPI</span>
-            <span>React</span>
-          </div>
-
-          <div class="live-telemetry">
-            <div class="telemetry-item">
-              <span class="telemetry-label">SYSTEM:</span>
-              <span class="telemetry-val blue">ONLINE</span>
-            </div>
-
-            <div class="telemetry-item">
-              <span class="telemetry-label">CORE:</span>
-              <span class="telemetry-val">CV • IoT • FULL-STACK</span>
-            </div>
-          </div>
-
-          <svg
-            class="pulse-line"
-            viewBox="0 0 300 60"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
-            <path d="M0,30 L60,30 L75,10 L90,50 L105,30 L300,30"></path>
-          </svg>
+      <aside class="mission-panel panel reveal delay-1" aria-label="Current engineering status">
+        <div class="panel-header">
+          <span>MISSION CONTROL</span>
+          <span class="live-indicator"><i></i> LIVE</span>
         </div>
-      </div>
+
+        <div class="active-system">
+          <p class="micro-label">ACTIVE SYSTEM</p>
+          <div class="system-title-row">
+            <div>
+              <h2>PlateScope</h2>
+              <p>Traffic Video Intelligence / ANPR</p>
+            </div>
+            <span class="system-id">PS-01</span>
+          </div>
+
+          <div class="signal-window" aria-hidden="true">
+            <div class="scan-line"></div>
+            <div class="plate-frame">
+              <span>TN · 45 · AB · 1234</span>
+            </div>
+            <div class="signal-label signal-label-a">DETECT</div>
+            <div class="signal-label signal-label-b">OCR</div>
+            <div class="signal-label signal-label-c">VOTE</div>
+          </div>
+        </div>
+
+        <div class="telemetry-grid">
+          <div>
+            <span>PIPELINE</span>
+            <strong>YOLO → OCR</strong>
+          </div>
+          <div>
+            <span>BACKEND</span>
+            <strong>FastAPI</strong>
+          </div>
+          <div>
+            <span>INTERFACE</span>
+            <strong>React + TS</strong>
+          </div>
+          <div>
+            <span>STATUS</span>
+            <strong class="status-text">PROTOTYPE</strong>
+          </div>
+        </div>
+
+        <button class="text-action" type="button" data-project="platescope">
+          OPEN SYSTEM BRIEF <span>→</span>
+        </button>
+      </aside>
     </section>
 
     <!-- =======================================================
-         ABOUT
+         SYSTEM MAP
     ======================================================== -->
-    <section class="section" id="about">
-      <div class="section-title reveal">
-        <p class="section-tag">// 01 — PROFILE OVERVIEW</p>
-        <h2>Bridging electronics, intelligence and software</h2>
+    <section class="section" id="system-map" data-section-name="SYSTEM MAP">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-code">// 01 — SYSTEM MAP</p>
+          <h2>One engineering profile. Four connected domains.</h2>
+        </div>
+        <p>
+          Instead of listing tools in isolation, this map shows where each
+          capability is actually used.
+        </p>
       </div>
 
-      <div class="about-grid">
-        <div class="about-card panel spotlight-card reveal">
-          <p class="lead-text">
-            I am an
-            <strong>Electronics and Communication Engineering undergraduate</strong>
-            at <strong>VSB Engineering College</strong> focused on building
-            intelligent systems across
-            <strong>
-              Computer Vision, Artificial Intelligence, Embedded Systems,
-              IoT and Full-Stack Development.
-            </strong>
-          </p>
+      <div class="system-map reveal">
+        <div class="map-core">
+          <span class="core-ring ring-1"></span>
+          <span class="core-ring ring-2"></span>
+          <span class="core-ring ring-3"></span>
 
-          <p>
-            My projects combine software, machine learning, computer vision,
-            embedded hardware, REST APIs, cloud platforms and modern web
-            technologies. Recent work includes video-based automatic number
-            plate recognition, autonomous incident-analysis software and
-            ESP32-based Edge-AI monitoring systems.
-          </p>
-
-          <div class="about-pills">
-            <span class="pill-blue">Computer Vision</span>
-            <span class="pill-blue">Edge AI</span>
-            <span class="pill-blue">Embedded IoT</span>
-            <span class="pill-blue">Full-Stack</span>
+          <div class="core-node">
+            <small>ENGINEERING CORE</small>
+            <strong>VASANTH.S</strong>
+            <span>ECE + SOFTWARE</span>
           </div>
         </div>
 
-        <div class="about-highlights">
-          <div class="mini-card panel spotlight-card reveal delay-1">
-            <span class="corner-tag">01</span>
-            <h3>AI &amp; Computer Vision</h3>
+        <button class="map-node map-node-1" type="button" data-project="platescope">
+          <span class="node-code">PS-01</span>
+          <strong>PlateScope</strong>
+          <small>Computer Vision</small>
+        </button>
+
+        <button class="map-node map-node-2" type="button" data-project="astraguard">
+          <span class="node-code">AG-02</span>
+          <strong>AstraGuard</strong>
+          <small>Intelligent Software</small>
+        </button>
+
+        <button class="map-node map-node-3" type="button" data-project="resilient">
+          <span class="node-code">RA-03</span>
+          <strong>RESILIENT AI</strong>
+          <small>Edge AI / IoT</small>
+        </button>
+
+        <button class="map-node map-node-4" type="button" data-project="secapms">
+          <span class="node-code">SC-04</span>
+          <strong>SECAPMS</strong>
+          <small>Smart Infrastructure</small>
+        </button>
+
+        <svg class="map-lines" viewBox="0 0 1000 560" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="500" y1="280" x2="180" y2="110"></line>
+          <line x1="500" y1="280" x2="820" y2="110"></line>
+          <line x1="500" y1="280" x2="180" y2="455"></line>
+          <line x1="500" y1="280" x2="820" y2="455"></line>
+        </svg>
+      </div>
+
+      <p class="map-hint reveal">
+        Select any system node to inspect architecture, decisions, current status and limitations.
+      </p>
+    </section>
+
+    <!-- =======================================================
+         WORK / CASE STUDIES
+    ======================================================== -->
+    <section class="section" id="work" data-section-name="WORK">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-code">// 02 — SELECTED WORK</p>
+          <h2>Projects presented as engineering decisions, not just cards.</h2>
+        </div>
+        <p>
+          Each system answers a different problem across vision, software,
+          embedded intelligence and infrastructure.
+        </p>
+      </div>
+
+      <!-- PLATESCOPE FEATURE -->
+      <article class="feature-case panel reveal" data-project-context="platescope">
+        <div class="feature-topline">
+          <div>
+            <span class="case-number">01</span>
+            <span class="case-domain">COMPUTER VISION / FULL-STACK</span>
+          </div>
+          <span class="case-status">CURRENT FLAGSHIP</span>
+        </div>
+
+        <div class="feature-grid">
+          <div class="case-copy">
+            <h3>PlateScope</h3>
+            <p class="case-subtitle">Traffic video → unique registration intelligence.</p>
+
             <p>
-              Video analytics and recognition pipelines using Python, YOLO,
-              PaddleOCR, OpenCV and machine-learning inference.
+              Browser-only OCR was unreliable on moving traffic footage.
+              PlateScope separates detection from recognition, then combines
+              repeated observations across frames before producing a final plate.
             </p>
-          </div>
 
-          <div class="mini-card panel spotlight-card reveal delay-2">
-            <span class="corner-tag">02</span>
-            <h3>Embedded Intelligence</h3>
-            <p>
-              ESP32 sensor nodes, telemetry systems, edge processing,
-              ESP-NOW communication and real-time monitoring architectures.
-            </p>
-          </div>
-
-          <div class="mini-card panel spotlight-card reveal delay-3">
-            <span class="corner-tag">03</span>
-            <h3>Full-Stack Engineering</h3>
-            <p>
-              Intelligent backends and modern interfaces using FastAPI,
-              React, TypeScript, REST APIs and cloud deployment platforms.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================
-         SKILLS
-    ======================================================== -->
-    <section class="section" id="skills">
-      <div class="section-title reveal">
-        <p class="section-tag">// 02 — ENGINEERING STACK</p>
-        <h2>Technical Capability Matrix</h2>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-card panel spotlight-card reveal">
-          <div class="skill-icon-header">
-            <svg class="skill-svg" viewBox="0 0 24 24" aria-hidden="true">
-              <polyline points="16 18 22 12 16 6"></polyline>
-              <polyline points="8 6 2 12 8 18"></polyline>
-            </svg>
-            <h3>Programming</h3>
-          </div>
-
-          <ul>
-            <li><span class="dot"></span> Python</li>
-            <li><span class="dot"></span> C / C++</li>
-            <li><span class="dot"></span> Java</li>
-            <li><span class="dot"></span> JavaScript</li>
-            <li><span class="dot"></span> TypeScript</li>
-          </ul>
-        </div>
-
-        <div class="skill-card panel spotlight-card reveal delay-1">
-          <div class="skill-icon-header">
-            <svg class="skill-svg" viewBox="0 0 24 24" aria-hidden="true">
-              <circle cx="12" cy="12" r="3"></circle>
-              <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
-            </svg>
-            <h3>AI &amp; Computer Vision</h3>
-          </div>
-
-          <ul>
-            <li><span class="dot"></span> YOLO / Ultralytics</li>
-            <li><span class="dot"></span> PaddleOCR</li>
-            <li><span class="dot"></span> OpenCV</li>
-            <li><span class="dot"></span> PyTorch</li>
-            <li><span class="dot"></span> ML Inference</li>
-          </ul>
-        </div>
-
-        <div class="skill-card panel spotlight-card reveal delay-2">
-          <div class="skill-icon-header">
-            <svg class="skill-svg" viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="2" y="3" width="20" height="14" rx="2"></rect>
-              <line x1="8" y1="21" x2="16" y2="21"></line>
-              <line x1="12" y1="17" x2="12" y2="21"></line>
-            </svg>
-            <h3>Full-Stack</h3>
-          </div>
-
-          <ul>
-            <li><span class="dot"></span> React</li>
-            <li><span class="dot"></span> TypeScript</li>
-            <li><span class="dot"></span> FastAPI</li>
-            <li><span class="dot"></span> Node.js / Express</li>
-            <li><span class="dot"></span> REST APIs</li>
-          </ul>
-        </div>
-
-        <div class="skill-card panel spotlight-card reveal delay-3">
-          <div class="skill-icon-header">
-            <svg class="skill-svg" viewBox="0 0 24 24" aria-hidden="true">
-              <rect x="4" y="4" width="16" height="16" rx="2"></rect>
-              <rect x="9" y="9" width="6" height="6"></rect>
-              <line x1="9" y1="1" x2="9" y2="4"></line>
-              <line x1="15" y1="1" x2="15" y2="4"></line>
-              <line x1="9" y1="20" x2="9" y2="23"></line>
-              <line x1="15" y1="20" x2="15" y2="23"></line>
-              <line x1="20" y1="9" x2="23" y2="9"></line>
-              <line x1="20" y1="15" x2="23" y2="15"></line>
-              <line x1="1" y1="9" x2="4" y2="9"></line>
-              <line x1="1" y1="15" x2="4" y2="15"></line>
-            </svg>
-            <h3>Embedded &amp; IoT</h3>
-          </div>
-
-          <ul>
-            <li><span class="dot"></span> ESP32 / Arduino</li>
-            <li><span class="dot"></span> ESP-NOW</li>
-            <li><span class="dot"></span> MQTT</li>
-            <li><span class="dot"></span> Sensors &amp; Interfacing</li>
-            <li><span class="dot"></span> Edge Processing</li>
-          </ul>
-        </div>
-
-        <div class="skill-card panel spotlight-card reveal">
-          <div class="skill-icon-header">
-            <svg class="skill-svg" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8"></path>
-            </svg>
-            <h3>Cloud &amp; Tools</h3>
-          </div>
-
-          <ul>
-            <li><span class="dot"></span> Git / GitHub</li>
-            <li><span class="dot"></span> Vercel</li>
-            <li><span class="dot"></span> Render</li>
-            <li><span class="dot"></span> Supabase</li>
-            <li><span class="dot"></span> Postman / VS Code</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="core-subjects-panel panel spotlight-card reveal delay-1">
-        <div class="subjects-group">
-          <span class="subjects-label">CORE ECE / CS:</span>
-          <span class="subject-chip">Digital Electronics</span>
-          <span class="subject-chip">Signals &amp; Systems</span>
-          <span class="subject-chip">Data Structures</span>
-          <span class="subject-chip">DBMS</span>
-          <span class="subject-chip">Computer Networks</span>
-          <span class="subject-chip">Microcontrollers</span>
-        </div>
-
-        <div class="subjects-group">
-          <span class="subjects-label">PROFESSIONAL:</span>
-          <span class="subject-chip soft">Problem Solving</span>
-          <span class="subject-chip soft">Team Collaboration</span>
-          <span class="subject-chip soft">Technical Communication</span>
-          <span class="subject-chip soft">Rapid Prototyping</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- =======================================================
-         EXPERIENCE
-    ======================================================== -->
-    <section class="section" id="experience">
-      <div class="section-title reveal">
-        <p class="section-tag">// 03 — EXPERIENCE &amp; ENGINEERING GROWTH</p>
-        <h2>Practical Engineering Experience</h2>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item panel spotlight-card reveal">
-          <div class="timeline-dot"></div>
-
-          <div class="timeline-content">
-            <div class="timeline-header">
+            <div class="case-facts">
               <div>
-                <h3>Embedded Technologist Intern</h3>
-                <p class="company-name">Initz Technology, Coimbatore</p>
+                <span>PROBLEM</span>
+                <p>Blur, small plates, duplicate observations and unstable OCR.</p>
               </div>
-
-              <span class="badge-role">Industry Internship</span>
+              <div>
+                <span>APPROACH</span>
+                <p>YOLO localization + PaddleOCR + normalization + multi-frame voting.</p>
+              </div>
+              <div>
+                <span>MY WORK</span>
+                <p>ANPR pipeline, API integration, aggregation logic and web workflow.</p>
+              </div>
+              <div>
+                <span>STATUS</span>
+                <p>Working prototype focused on Indian registration formats.</p>
+              </div>
             </div>
 
-            <ul class="experience-bullets">
-              <li>Worked on embedded systems and IoT-based applications.</li>
-              <li>Developed hands-on experience with ESP32 and Arduino microcontrollers.</li>
-              <li>Performed sensor integration, hardware interfacing, testing and debugging.</li>
-              <li>Strengthened practical knowledge of embedded telemetry and device-level development.</li>
-            </ul>
+            <div class="case-actions">
+              <button class="button primary" type="button" data-project="platescope">
+                Inspect Case Study
+              </button>
+              <a
+                class="button ghost"
+                href="https://github.com/svasanth2508/PlateScope"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Repository ↗
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="timeline-item panel spotlight-card reveal delay-1">
-          <div class="timeline-dot"></div>
-
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <div>
-                <h3>Computer Vision &amp; Intelligent Software Development</h3>
-                <p class="company-name">Independent Engineering Projects</p>
-              </div>
-
-              <span class="badge-role highlight-blue">2026 Development Focus</span>
+          <div class="architecture-console" aria-label="PlateScope architecture">
+            <div class="console-bar">
+              <span>ARCHITECTURE / PS-01</span>
+              <div><i></i><i></i><i></i></div>
             </div>
 
-            <p class="secapms-desc">
-              Expanded from embedded systems and IoT into computer vision,
-              machine-learning inference and full-stack intelligent applications.
-            </p>
-
-            <ul class="experience-bullets">
-              <li>Built PlateScope using YOLO, PaddleOCR, OpenCV, FastAPI, React and TypeScript.</li>
-              <li>Developed AstraGuard for anomaly analysis, remediation reasoning and recovery verification.</li>
-              <li>Built ESP32 Edge-AI telemetry prototypes with cloud dashboards and risk processing.</li>
-              <li>Continued integrating ECE hardware knowledge with modern software engineering.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="timeline-item panel spotlight-card reveal delay-2">
-          <div class="timeline-dot"></div>
-
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <div>
-                <h3>SECAPMS — Smart Emergency Corridor</h3>
-                <p class="company-name">Smart Infrastructure / Hackathon Project</p>
+            <div class="pipeline">
+              <div class="pipeline-node">
+                <span>01</span>
+                <strong>VIDEO</strong>
+                <small>Traffic input</small>
               </div>
-
-              <span class="badge-role">Embedded + IoT + Web</span>
+              <b>→</b>
+              <div class="pipeline-node active">
+                <span>02</span>
+                <strong>YOLO</strong>
+                <small>Plate detect</small>
+              </div>
+              <b>→</b>
+              <div class="pipeline-node">
+                <span>03</span>
+                <strong>OCR</strong>
+                <small>Text extract</small>
+              </div>
+              <b>→</b>
+              <div class="pipeline-node active">
+                <span>04</span>
+                <strong>VOTE</strong>
+                <small>Multi-frame</small>
+              </div>
+              <b>→</b>
+              <div class="pipeline-node">
+                <span>05</span>
+                <strong>RESULT</strong>
+                <small>Unique plate</small>
+              </div>
             </div>
 
-            <p class="secapms-desc">
-              Designed an emergency vehicle priority concept combining embedded
-              traffic controllers, IoT communication and a real-time monitoring platform.
-            </p>
-
-            <ul class="experience-bullets">
-              <li>Designed ESP32-based traffic-priority control concepts.</li>
-              <li>Integrated emergency vehicle monitoring with a web dashboard.</li>
-              <li>Explored smart-infrastructure workflows for traffic coordination.</li>
-            </ul>
+            <div class="console-readout">
+              <div>
+                <span>DETECTOR</span>
+                <strong>YOLO</strong>
+              </div>
+              <div>
+                <span>RECOGNIZER</span>
+                <strong>PaddleOCR</strong>
+              </div>
+              <div>
+                <span>API</span>
+                <strong>FastAPI</strong>
+              </div>
+              <div>
+                <span>CLIENT</span>
+                <strong>React / TS</strong>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </article>
 
-    <!-- =======================================================
-         PROJECTS
-    ======================================================== -->
-    <section class="section" id="projects">
-      <div class="section-title reveal">
-        <p class="section-tag">// 04 — FEATURED ENGINEERING</p>
-        <h2>Selected Projects &amp; Systems</h2>
-      </div>
-
-      <div class="project-filter reveal" role="group" aria-label="Filter projects">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="ai">AI &amp; Computer Vision</button>
-        <button class="filter-btn" data-filter="web">Full-Stack</button>
-        <button class="filter-btn" data-filter="iot">IoT &amp; Embedded</button>
-        <button class="filter-btn" data-filter="smart">Smart Infrastructure</button>
-      </div>
-
-      <div class="projects-grid">
-        <!-- PlateScope -->
-        <article class="project-card panel spotlight-card reveal" data-category="ai web">
-          <span class="corner-tag">PROJ.01</span>
-
-          <div class="project-top">
-            <span class="project-badge blue">CURRENT FLAGSHIP • AI / COMPUTER VISION</span>
-            <h3>PlateScope — Intelligent ANPR Platform</h3>
+      <div class="project-grid">
+        <article class="project-card panel reveal" data-project-context="astraguard">
+          <div class="project-card-top">
+            <span class="system-id">AG-02</span>
+            <span class="project-state deployed">DEPLOYED</span>
           </div>
-
+          <p class="project-domain">INTELLIGENT OPERATIONS</p>
+          <h3>AstraGuard</h3>
           <p>
-            AI-powered Automatic Number Plate Recognition platform that processes
-            traffic video, detects license plates using YOLO, recognizes
-            registration numbers with PaddleOCR, validates Indian plate patterns,
-            combines repeated observations across frames and presents unique
-            results through a React dashboard.
+            Incident-resolution platform that evaluates anomalies, dependencies
+            and remediation risk before recovery actions.
           </p>
 
-          <div class="project-tags">
-            <span>Python</span>
-            <span>YOLO</span>
-            <span>PaddleOCR</span>
-            <span>OpenCV</span>
-            <span>FastAPI</span>
-            <span>React</span>
-            <span>TypeScript</span>
+          <div class="project-stack">
+            <span>Python</span><span>FastAPI</span><span>React</span><span>ML</span>
           </div>
 
-          <div class="project-links">
-            <a
-              href="https://github.com/svasanth2508/PlateScope"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="proj-link"
-            >
-              GitHub Repository ↗
-            </a>
-          </div>
-        </article>
-
-        <!-- AstraGuard -->
-        <article class="project-card panel spotlight-card reveal delay-1" data-category="ai web">
-          <span class="corner-tag">PROJ.02</span>
-
-          <div class="project-top">
-            <span class="project-badge blue">AUTONOMOUS INTELLIGENCE</span>
-            <h3>AstraGuard</h3>
-          </div>
-
-          <p>
-            Autonomous enterprise incident-resolution platform designed to detect
-            anomalies, perform root-cause analysis, evaluate remediation risk,
-            execute safe actions, verify recovery and learn from confirmed incidents.
-          </p>
-
-          <div class="project-tags">
-            <span>Python</span>
-            <span>FastAPI</span>
-            <span>Machine Learning</span>
-            <span>Risk Analysis</span>
-            <span>React</span>
-            <span>Automation</span>
-          </div>
-
-          <div class="project-links">
-            <a
-              href="https://github.com/svasanth2508/AstraGuard"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="proj-link"
-            >
-              GitHub ↗
-            </a>
-
+          <div class="project-card-footer">
+            <button type="button" data-project="astraguard">Inspect system →</button>
             <a
               href="https://astraguard-eight.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              class="proj-link"
-            >
-              Live Demo ↗
-            </a>
+            >Live ↗</a>
           </div>
         </article>
 
-        <!-- RESILIENT_AI_SIH -->
-        <article class="project-card panel spotlight-card reveal delay-2" data-category="ai iot smart">
-          <span class="corner-tag">PROJ.03</span>
-
-          <div class="project-top">
-            <span class="project-badge">EDGE AI • ESP32 • IoT</span>
-            <h3>RESILIENT_AI_SIH</h3>
+        <article class="project-card panel reveal delay-1" data-project-context="resilient">
+          <div class="project-card-top">
+            <span class="system-id">RA-03</span>
+            <span class="project-state prototype">PROTOTYPE</span>
           </div>
-
+          <p class="project-domain">EDGE AI / EMBEDDED IoT</p>
+          <h3>RESILIENT_AI_SIH</h3>
           <p>
-            ESP32 Edge-AI environmental monitoring platform combining multi-sensor
-            telemetry, embedded risk processing, ESP-NOW communication, cloud APIs
-            and a live monitoring dashboard.
+            Multi-node ESP32 monitoring architecture with edge risk processing,
+            ESP-NOW communication and cloud visualization.
           </p>
 
-          <div class="project-tags">
-            <span>ESP32</span>
-            <span>Edge AI</span>
-            <span>ESP-NOW</span>
-            <span>IoT</span>
-            <span>Telemetry</span>
-            <span>Cloud Dashboard</span>
+          <div class="project-stack">
+            <span>ESP32</span><span>ESP-NOW</span><span>Edge AI</span><span>IoT</span>
           </div>
 
-          <div class="project-links">
-            <a
-              href="https://github.com/svasanth2508/RESILIENT_AI_SIH"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="proj-link"
-            >
-              GitHub ↗
-            </a>
-
+          <div class="project-card-footer">
+            <button type="button" data-project="resilient">Inspect system →</button>
             <a
               href="https://resilient-ai-sih.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              class="proj-link"
-            >
-              Live Demo ↗
-            </a>
+            >Live ↗</a>
           </div>
         </article>
 
-        <!-- SECAPMS -->
-        <article class="project-card panel spotlight-card reveal delay-3" data-category="web iot smart">
-          <span class="corner-tag">PROJ.04</span>
-
-          <div class="project-top">
-            <span class="project-badge">SMART INFRASTRUCTURE • IoT</span>
-            <h3>SECAPMS — Smart Emergency Corridor</h3>
+        <article class="project-card panel reveal delay-2" data-project-context="secapms">
+          <div class="project-card-top">
+            <span class="system-id">SC-04</span>
+            <span class="project-state concept">SYSTEM CONCEPT</span>
           </div>
-
+          <p class="project-domain">SMART INFRASTRUCTURE</p>
+          <h3>SECAPMS</h3>
           <p>
-            Smart Emergency Corridor &amp; Ambulance Priority Management System
-            designed to coordinate emergency vehicle movement and traffic-junction
-            priority using embedded controllers, IoT communication and a real-time
-            monitoring platform.
+            Emergency vehicle priority concept connecting embedded traffic
+            control with live monitoring and smart-infrastructure workflows.
           </p>
 
-          <div class="project-tags">
-            <span>ESP32</span>
-            <span>IoT</span>
-            <span>Real-Time Systems</span>
-            <span>Web Dashboard</span>
-            <span>Smart Infrastructure</span>
+          <div class="project-stack">
+            <span>ESP32</span><span>IoT</span><span>Web</span><span>Real-Time</span>
           </div>
 
-          <div class="project-links">
-            <a
-              href="https://github.com/svasanth2508/secapms-project"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="proj-link"
-            >
-              GitHub ↗
-            </a>
-
+          <div class="project-card-footer">
+            <button type="button" data-project="secapms">Inspect system →</button>
             <a
               href="https://secapms-project.vercel.app"
               target="_blank"
               rel="noopener noreferrer"
-              class="proj-link"
-            >
-              Live Demo ↗
-            </a>
-
-            <button class="proj-link active-btn" id="secapmsArchBtn">
-              Architecture ↗
-            </button>
-          </div>
-        </article>
-
-        <!-- LeetCode -->
-        <article class="project-card panel spotlight-card reveal" data-category="web">
-          <span class="corner-tag">PROJ.05</span>
-
-          <div class="project-top">
-            <span class="project-badge">DSA • PROBLEM SOLVING</span>
-            <h3>LeetCode Progress</h3>
-          </div>
-
-          <p>
-            Repository used to document ongoing data structures and algorithms
-            practice, coding progress and problem-solving development.
-          </p>
-
-          <div class="project-tags">
-            <span>DSA</span>
-            <span>Algorithms</span>
-            <span>Problem Solving</span>
-            <span>Programming Practice</span>
-          </div>
-
-          <div class="project-links">
-            <a
-              href="https://github.com/svasanth2508/LeetCode-Progress"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="proj-link"
-            >
-              GitHub ↗
-            </a>
+            >Live ↗</a>
           </div>
         </article>
       </div>
     </section>
 
     <!-- =======================================================
-         GITHUB SHOWCASE
+         CAPABILITY MATRIX
     ======================================================== -->
-    <section class="section" id="github">
-      <div class="section-title reveal">
-        <p class="section-tag">// 05 — ENGINEERING REPOSITORIES</p>
-        <h2>GitHub Engineering Showcase</h2>
+    <section class="section" id="capabilities" data-section-name="CAPABILITIES">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-code">// 03 — CAPABILITY MATRIX</p>
+          <h2>Skills connected to proof.</h2>
+        </div>
+        <p>
+          Technologies are shown with the systems where they were actually used.
+        </p>
       </div>
 
-      <div class="github-showcase-grid">
-        <div class="github-profile-card panel spotlight-card reveal">
-          <div class="gh-header">
-            <div class="gh-user-info">
-              <div class="gh-avatar-wrapper">
-                <div class="gh-avatar">VS</div>
-                <span class="gh-status-dot"></span>
-              </div>
+      <div class="capability-grid">
+        <article class="capability-card panel reveal">
+          <span class="cap-code">INTELLIGENCE</span>
+          <h3>Computer Vision</h3>
+          <ul>
+            <li><strong>YOLO</strong><span>PlateScope</span></li>
+            <li><strong>PaddleOCR</strong><span>PlateScope</span></li>
+            <li><strong>OpenCV</strong><span>PlateScope</span></li>
+            <li><strong>PyTorch</strong><span>Inference</span></li>
+          </ul>
+        </article>
 
-              <div>
-                <h3>Vasanth S</h3>
+        <article class="capability-card panel reveal delay-1">
+          <span class="cap-code">SOFTWARE</span>
+          <h3>Full-Stack</h3>
+          <ul>
+            <li><strong>Python</strong><span>PS / AG</span></li>
+            <li><strong>FastAPI</strong><span>PS / AG</span></li>
+            <li><strong>React</strong><span>PS / AG</span></li>
+            <li><strong>TypeScript</strong><span>PS / AG</span></li>
+          </ul>
+        </article>
 
-                <a
-                  href="https://github.com/svasanth2508"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="gh-handle"
-                >
-                  @svasanth2508 ↗
-                </a>
+        <article class="capability-card panel reveal delay-2">
+          <span class="cap-code">EDGE</span>
+          <h3>Embedded IoT</h3>
+          <ul>
+            <li><strong>ESP32</strong><span>RA / SC</span></li>
+            <li><strong>ESP-NOW</strong><span>RA</span></li>
+            <li><strong>MQTT</strong><span>IoT systems</span></li>
+            <li><strong>Sensors</strong><span>Embedded builds</span></li>
+          </ul>
+        </article>
 
-                <p class="gh-bio">
-                  ECE Undergraduate | Computer Vision | Embedded IoT | Full-Stack
-                </p>
-              </div>
-            </div>
+        <article class="capability-card panel reveal delay-3">
+          <span class="cap-code">INFRASTRUCTURE</span>
+          <h3>Cloud &amp; Tools</h3>
+          <ul>
+            <li><strong>GitHub</strong><span>Source control</span></li>
+            <li><strong>Vercel</strong><span>Frontend deploy</span></li>
+            <li><strong>Render</strong><span>Backend deploy</span></li>
+            <li><strong>Supabase</strong><span>Cloud data</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-            <a
-              href="https://github.com/svasanth2508"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-primary btn-sm"
-            >
-              GitHub Profile
-            </a>
+    <!-- =======================================================
+         BUILD LOG
+    ======================================================== -->
+    <section class="section" id="build-log" data-section-name="BUILD LOG">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-code">// 04 — ENGINEERING LOG</p>
+          <h2>A portfolio that shows progression, not just final outputs.</h2>
+        </div>
+        <p>
+          Selected milestones from embedded systems to computer vision and
+          intelligent software.
+        </p>
+      </div>
+
+      <div class="build-log panel reveal">
+        <div class="log-row">
+          <time datetime="2026-09-26">SEP 26 · 2026</time>
+          <span class="log-dot current"></span>
+          <div>
+            <strong>PlateScope repository published</strong>
+            <p>YOLO + PaddleOCR ANPR pipeline with FastAPI and React workflow.</p>
           </div>
-
-          <div class="gh-stats-row">
-            <div class="gh-stat-box">
-              <span class="gh-stat-num">AI + CV</span>
-              <span class="gh-stat-label">Intelligence</span>
-            </div>
-
-            <div class="gh-stat-box">
-              <span class="gh-stat-num">ESP32</span>
-              <span class="gh-stat-label">Embedded Core</span>
-            </div>
-
-            <div class="gh-stat-box">
-              <span class="gh-stat-num">Python + TS</span>
-              <span class="gh-stat-label">Software Stack</span>
-            </div>
-          </div>
-
-          <div class="gh-lang-section">
-            <h4>Current Engineering Stack</h4>
-
-            <div class="lang-legend">
-              <span><span class="legend-dot py"></span> Python</span>
-              <span><span class="legend-dot js"></span> TypeScript / JavaScript</span>
-              <span><span class="legend-dot cpp"></span> C++ / ESP32</span>
-              <span><span class="legend-dot html"></span> HTML / CSS</span>
-            </div>
-          </div>
+          <span class="log-tag">CV</span>
         </div>
 
-        <div class="github-features-card panel spotlight-card reveal delay-1">
-          <h3>Featured Repositories</h3>
-
-          <p class="gh-desc">
-            Selected engineering codebases maintained under
-            <strong>@svasanth2508</strong>.
-          </p>
-
-          <div class="gh-repo-list">
-            <a
-              href="https://github.com/svasanth2508/PlateScope"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="gh-repo-item"
-            >
-              <div class="repo-item-top">
-                <span class="repo-title">
-                  <svg class="repo-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                  PlateScope
-                </span>
-
-                <span class="repo-badge flagship">AI / CV Flagship</span>
-              </div>
-
-              <p class="repo-desc">
-                AI-powered ANPR platform using YOLO and PaddleOCR to recognize
-                Indian vehicle registration plates from traffic video.
-              </p>
-
-              <div class="repo-meta">
-                <span><span class="legend-dot py"></span> Python</span>
-                <span>YOLO / OCR</span>
-                <span class="star-count">★ Flagship</span>
-              </div>
-            </a>
-
-            <a
-              href="https://github.com/svasanth2508/AstraGuard"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="gh-repo-item"
-            >
-              <div class="repo-item-top">
-                <span class="repo-title">
-                  <svg class="repo-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                  AstraGuard
-                </span>
-
-                <span class="repo-badge">Autonomous Software</span>
-              </div>
-
-              <p class="repo-desc">
-                Incident-resolution platform for anomaly detection, root-cause
-                reasoning, remediation-risk evaluation and recovery verification.
-              </p>
-
-              <div class="repo-meta">
-                <span><span class="legend-dot py"></span> Python</span>
-                <span>FastAPI / ML</span>
-                <span class="star-count">★ Automation</span>
-              </div>
-            </a>
-
-            <a
-              href="https://github.com/svasanth2508/RESILIENT_AI_SIH"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="gh-repo-item"
-            >
-              <div class="repo-item-top">
-                <span class="repo-title">
-                  <svg class="repo-icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                  </svg>
-                  RESILIENT_AI_SIH
-                </span>
-
-                <span class="repo-badge">Edge AI / IoT</span>
-              </div>
-
-              <p class="repo-desc">
-                ESP32 Edge-AI monitoring system combining sensor telemetry,
-                edge processing, cloud APIs and live dashboard visualization.
-              </p>
-
-              <div class="repo-meta">
-                <span><span class="legend-dot cpp"></span> ESP32</span>
-                <span>IoT / Edge AI</span>
-                <span class="star-count">★ Embedded</span>
-              </div>
-            </a>
+        <div class="log-row">
+          <time datetime="2026-09-19">SEP 19 · 2026</time>
+          <span class="log-dot"></span>
+          <div>
+            <strong>AstraGuard cloud deployment</strong>
+            <p>Autonomous incident analysis, risk-based remediation and verification.</p>
           </div>
+          <span class="log-tag">SOFTWARE</span>
+        </div>
 
-          <div class="gh-quick-links mt-2">
-            <a
-              href="https://github.com/svasanth2508?tab=repositories"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="gh-link-pill"
-            >
-              <svg class="pill-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-              </svg>
-              View All Repositories ↗
-            </a>
+        <div class="log-row">
+          <time datetime="2026-09-08">SEP 08 · 2026</time>
+          <span class="log-dot"></span>
+          <div>
+            <strong>RESILIENT_AI_SIH prototype</strong>
+            <p>ESP32 edge processing, ESP-NOW telemetry and cloud dashboard.</p>
           </div>
+          <span class="log-tag">EDGE</span>
+        </div>
+
+        <div class="log-row">
+          <time datetime="2026-07">2026</time>
+          <span class="log-dot"></span>
+          <div>
+            <strong>SECAPMS smart-infrastructure concept</strong>
+            <p>Emergency vehicle priority using embedded traffic control and web monitoring.</p>
+          </div>
+          <span class="log-tag">IoT</span>
         </div>
       </div>
     </section>
 
     <!-- =======================================================
-         EDUCATION & CERTIFICATIONS
+         EXPERIENCE + CREDENTIALS
     ======================================================== -->
-    <section class="section" id="education">
-      <div class="section-title reveal">
-        <p class="section-tag">// 06 — ACADEMICS &amp; CREDENTIALS</p>
-        <h2>Education &amp; Certifications</h2>
+    <section class="section" id="credentials" data-section-name="CREDENTIALS">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-code">// 05 — CREDENTIALS</p>
+          <h2>Foundation behind the systems.</h2>
+        </div>
+        <p>
+          Academic grounding, industry exposure and continuous technical development.
+        </p>
       </div>
 
-      <div class="education-grid">
-        <div class="edu-card panel spotlight-card reveal">
-          <h3>Academic Qualification</h3>
+      <div class="credentials-grid">
+        <article class="credential-panel panel reveal">
+          <span class="credential-label">EDUCATION</span>
+          <h3>B.E. Electronics &amp; Communication Engineering</h3>
+          <p>VSB Engineering College, Karur, Tamil Nadu</p>
 
-          <div class="edu-item">
-            <div class="edu-top">
-              <span class="edu-degree">
-                B.E. — Electronics &amp; Communication Engineering
-              </span>
-              <span class="edu-year">2025 – 2029</span>
-            </div>
-
-            <p class="edu-college">
-              VSB Engineering College, Karur, Tamil Nadu
-            </p>
-
-            <div class="edu-score-badge">
-              CGPA: 8.005 / 10
-            </div>
+          <div class="credential-meta">
+            <span>2025 — 2029</span>
+            <strong>CGPA 8.005 / 10</strong>
           </div>
 
-          <div class="edu-item divider-top">
-            <div class="edu-top">
-              <span class="edu-degree">Higher Secondary Certificate (HSC)</span>
-              <span class="edu-year">2023 – 2025</span>
-            </div>
-
-            <p class="edu-college">Tamil Nadu State Board</p>
-            <div class="edu-score-badge alt">Score: 81.6%</div>
+          <div class="course-chips">
+            <span>Digital Electronics</span>
+            <span>Signals &amp; Systems</span>
+            <span>Data Structures</span>
+            <span>Microcontrollers</span>
+            <span>Computer Networks</span>
           </div>
+        </article>
 
-          <div class="edu-item divider-top">
-            <div class="edu-top">
-              <span class="edu-degree">
-                Secondary School Leaving Certificate (SSLC)
-              </span>
-              <span class="edu-year">2022 – 2023</span>
-            </div>
+        <article class="credential-panel panel reveal delay-1">
+          <span class="credential-label">INDUSTRY EXPOSURE</span>
+          <h3>Embedded Technologist Intern</h3>
+          <p>Initz Technology, Coimbatore</p>
 
-            <p class="edu-college">Tamil Nadu State Board</p>
-            <div class="edu-score-badge alt">Score: 82.2%</div>
-          </div>
-        </div>
+          <ul class="clean-list">
+            <li>ESP32 &amp; Arduino development</li>
+            <li>Sensor integration &amp; interfacing</li>
+            <li>Embedded debugging &amp; testing</li>
+            <li>IoT telemetry fundamentals</li>
+          </ul>
+        </article>
 
-        <div class="cert-card panel spotlight-card reveal delay-1">
-          <h3>Certifications &amp; Achievements</h3>
+        <article class="credential-panel panel reveal delay-2">
+          <span class="credential-label">CONTINUOUS LEARNING</span>
+          <h3>Certifications &amp; Practice</h3>
 
-          <div class="cert-list">
-            <div class="cert-item">
-              <span class="cert-bullet"></span>
-              <div>
-                <p class="cert-name">Full Stack Developer Certification</p>
-                <p class="cert-issuer">CSC Computer Education</p>
-              </div>
-            </div>
-
-            <div class="cert-item">
-              <span class="cert-bullet"></span>
-              <div>
-                <p class="cert-name">Basics of Python</p>
-                <p class="cert-issuer">Springboard</p>
-              </div>
-            </div>
-
-            <div class="cert-item">
-              <span class="cert-bullet"></span>
-              <div>
-                <p class="cert-name">Intro to NLP &amp; LLMs</p>
-                <p class="cert-issuer">Springboard</p>
-              </div>
-            </div>
-
-            <div class="cert-item">
-              <span class="cert-bullet"></span>
-              <div>
-                <p class="cert-name">Prompt Engineering Certification</p>
-                <p class="cert-issuer">B10X Platform</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="achieve-box">
-            <h4>Honors &amp; Extra-Curriculars</h4>
-            <p>🏆 <strong>Runner-up</strong> — College Technical Symposium</p>
-            <p>🏀 <strong>State Level Basketball Player</strong></p>
-            <p>🚀 <strong>Hackathon Project Work</strong> — Embedded, IoT &amp; Intelligent Systems</p>
-          </div>
-        </div>
+          <ul class="clean-list">
+            <li>Full Stack Developer — CSC Computer Education</li>
+            <li>Basics of Python — Springboard</li>
+            <li>Intro to NLP &amp; LLMs — Springboard</li>
+            <li>Prompt Engineering — B10X</li>
+            <li>LeetCode / DSA practice</li>
+          </ul>
+        </article>
       </div>
     </section>
 
     <!-- =======================================================
          CONTACT
     ======================================================== -->
-    <section class="section" id="contact">
-      <div class="section-title reveal">
-        <p class="section-tag">// 07 — CONNECT</p>
-        <h2>Let's build something meaningful</h2>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-card panel spotlight-card reveal">
-          <h3>Contact Information</h3>
-
+    <section class="section contact-section" id="contact" data-section-name="CONTACT">
+      <div class="contact-panel panel reveal">
+        <div>
+          <p class="section-code">// 06 — CONTACT</p>
+          <h2>Have an engineering problem worth building?</h2>
           <p>
-            For project discussions, internships, collaboration opportunities
-            or engineering conversations, connect through the channels below.
+            For internships, project discussions, technical collaboration or
+            engineering conversations, use any channel below.
           </p>
-
-          <div class="contact-list">
-            <a
-              href="mailto:svasanth2508@gmail.com"
-              class="contact-item-row"
-              title="Email Vasanth"
-            >
-              <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-
-              <div>
-                <span class="contact-label">Email</span>
-                <span class="contact-val">svasanth2508@gmail.com ↗</span>
-              </div>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/vasanth-sakthivel-05ba25396/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-item-row"
-            >
-              <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
-              </svg>
-
-              <div>
-                <span class="contact-label">LinkedIn</span>
-                <span class="contact-val">Vasanth S ↗</span>
-              </div>
-            </a>
-
-            <a
-              href="https://github.com/svasanth2508"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-item-row"
-            >
-              <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77"></path>
-              </svg>
-
-              <div>
-                <span class="contact-label">GitHub</span>
-                <span class="contact-val">github.com/svasanth2508 ↗</span>
-              </div>
-            </a>
-
-            <a
-              href="https://svasanth2508.github.io/PORTFOLIO/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="contact-item-row"
-            >
-              <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path d="M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"></path>
-              </svg>
-
-              <div>
-                <span class="contact-label">Portfolio</span>
-                <span class="contact-val">Open Live Portfolio ↗</span>
-              </div>
-            </a>
-          </div>
         </div>
 
-        <form
-          class="contact-form panel spotlight-card reveal delay-1"
-          id="contactForm"
-          novalidate
-        >
-          <div class="form-header-badge">
-            <span class="dot-green"></span>
-            <span>DIRECT EMAIL DISPATCH</span>
-          </div>
+        <div class="contact-actions">
+          <a class="contact-link" href="mailto:svasanth2508@gmail.com">
+            <span>EMAIL</span>
+            <strong>svasanth2508@gmail.com</strong>
+            <b>↗</b>
+          </a>
 
-          <label class="sr-only" for="name">Your name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your Name or Organization"
-            autocomplete="name"
-            required
-          />
+          <a
+            class="contact-link"
+            href="https://www.linkedin.com/in/vasanth-sakthivel-05ba25396/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>LINKEDIN</span>
+            <strong>Vasanth S</strong>
+            <b>↗</b>
+          </a>
 
-          <label class="sr-only" for="email">Your email or phone</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Your Email Address"
-            autocomplete="email"
-            required
-          />
-
-          <label class="sr-only" for="message">Your message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Write your message, collaboration idea or opportunity..."
-            required
-          ></textarea>
-
-          <div class="contact-buttons-row">
-            <button type="submit" class="btn btn-primary" id="sendEmailBtn">
-              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                <polyline points="22,6 12,13 2,6"></polyline>
-              </svg>
-              Send via Email
-            </button>
-
-            <!-- Kept for compatibility with the existing script.js handler. -->
-            <button
-              type="button"
-              class="btn btn-secondary"
-              id="sendWhatsAppBtn"
-              aria-label="Open WhatsApp contact"
-            >
-              <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
-              </svg>
-              WhatsApp
-            </button>
-          </div>
-
-          <p
-            class="form-status"
-            id="formStatus"
-            role="status"
-            aria-live="polite"
-          ></p>
-        </form>
+          <a
+            class="contact-link"
+            href="https://github.com/svasanth2508"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>GITHUB</span>
+            <strong>@svasanth2508</strong>
+            <b>↗</b>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
   <!-- =========================================================
-       TELEMETRY HUD
+       HUD
   ========================================================== -->
-  <div class="hud-bar" id="hudBar">
-    <div class="hud-item">
-      <span class="hud-label">MOUSE POS:</span>
-      <span id="hudMouse" class="hud-val">X: 0 | Y: 0</span>
+  <div class="hud" aria-label="Portfolio status">
+    <div>
+      <span>VIEW</span>
+      <strong id="hudSection">OVERVIEW</strong>
     </div>
-
-    <div class="hud-item">
-      <span class="hud-label">SCROLL POS:</span>
-      <span id="hudScroll" class="hud-val">0px (0%)</span>
+    <div class="hud-desktop">
+      <span>ACTIVE</span>
+      <strong id="hudProject">PLATESCOPE</strong>
     </div>
-
-    <div class="hud-item">
-      <span class="hud-label">SECTION:</span>
-      <span id="hudSection" class="hud-val blue">#hero</span>
+    <div class="hud-desktop">
+      <span>STACK</span>
+      <strong id="hudStack">PYTHON / YOLO</strong>
     </div>
-
-    <div class="hud-item hud-desktop-only">
-      <span class="hud-label">PAGE DEPTH:</span>
-      <span id="hudDepth" class="hud-val">0px</span>
+    <div>
+      <span>STATUS</span>
+      <strong class="hud-online">ONLINE</strong>
     </div>
-
-    <div class="hud-item">
-      <span class="hud-label">STATUS:</span>
-      <span class="hud-val blue">ONLINE • CV / IoT / FULL-STACK</span>
-    </div>
+    <button type="button" id="hudCommand">CTRL K / COMMAND</button>
   </div>
 
-  <!-- Return to Top -->
-  <button
-    class="floating-top-btn"
-    id="floatingTopBtn"
-    aria-label="Return to Top"
-    title="Return to Top"
+  <!-- =========================================================
+       PROJECT INSPECTOR DRAWER
+  ========================================================== -->
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+  <aside
+    class="project-drawer"
+    id="projectDrawer"
+    aria-hidden="true"
+    aria-labelledby="drawerTitle"
   >
-    <svg class="top-icon" viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M12 19V5M5 12l7-7 7 7"></path>
-    </svg>
-    <span>TOP</span>
-  </button>
+    <div class="drawer-header">
+      <div>
+        <span id="drawerCode">PS-01</span>
+        <strong id="drawerDomain">COMPUTER VISION</strong>
+      </div>
 
-  <!-- Footer -->
+      <button type="button" id="drawerClose" aria-label="Close project inspector">×</button>
+    </div>
+
+    <div class="drawer-body">
+      <p class="micro-label">SYSTEM BRIEF</p>
+      <h2 id="drawerTitle">PlateScope</h2>
+      <p class="drawer-lead" id="drawerLead"></p>
+
+      <div class="drawer-section">
+        <h3>Problem</h3>
+        <p id="drawerProblem"></p>
+      </div>
+
+      <div class="drawer-section">
+        <h3>Engineering approach</h3>
+        <div class="drawer-architecture" id="drawerArchitecture"></div>
+      </div>
+
+      <div class="drawer-section">
+        <h3>Why these decisions?</h3>
+        <div class="decision-list" id="drawerDecisions"></div>
+      </div>
+
+      <div class="drawer-section">
+        <h3>My contribution</h3>
+        <ul id="drawerContribution"></ul>
+      </div>
+
+      <div class="drawer-section">
+        <h3>Current limitations</h3>
+        <ul id="drawerLimitations"></ul>
+      </div>
+
+      <div class="drawer-section">
+        <h3>Stack</h3>
+        <div class="drawer-stack" id="drawerStack"></div>
+      </div>
+
+      <div class="drawer-actions" id="drawerActions"></div>
+    </div>
+  </aside>
+
+  <!-- =========================================================
+       COMMAND PALETTE
+  ========================================================== -->
+  <div class="command-overlay" id="commandOverlay" aria-hidden="true">
+    <div class="command-palette" role="dialog" aria-modal="true" aria-labelledby="commandTitle">
+      <div class="command-search">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-3.5-3.5"></path>
+        </svg>
+        <input
+          id="commandInput"
+          type="text"
+          placeholder="Navigate or inspect a system..."
+          autocomplete="off"
+          aria-label="Command search"
+        />
+        <kbd>ESC</kbd>
+      </div>
+
+      <div class="command-list" id="commandList">
+        <button data-command="goto" data-target="#work">
+          <span>01</span><strong>Open selected work</strong><small>Projects</small>
+        </button>
+        <button data-command="project" data-project="platescope">
+          <span>PS</span><strong>Inspect PlateScope</strong><small>Computer Vision</small>
+        </button>
+        <button data-command="project" data-project="astraguard">
+          <span>AG</span><strong>Inspect AstraGuard</strong><small>Intelligent Software</small>
+        </button>
+        <button data-command="project" data-project="resilient">
+          <span>RA</span><strong>Inspect RESILIENT_AI</strong><small>Edge AI</small>
+        </button>
+        <button data-command="project" data-project="secapms">
+          <span>SC</span><strong>Inspect SECAPMS</strong><small>Smart Infrastructure</small>
+        </button>
+        <button data-command="goto" data-target="#build-log">
+          <span>02</span><strong>Open engineering log</strong><small>Timeline</small>
+        </button>
+        <button data-command="goto" data-target="#credentials">
+          <span>03</span><strong>View credentials</strong><small>Education</small>
+        </button>
+        <button data-command="goto" data-target="#contact">
+          <span>04</span><strong>Contact Vasanth</strong><small>Email / LinkedIn</small>
+        </button>
+        <a href="https://github.com/svasanth2508" target="_blank" rel="noopener noreferrer">
+          <span>GH</span><strong>Open GitHub</strong><small>External ↗</small>
+        </a>
+      </div>
+
+      <div class="command-footer">
+        <span>↑↓ navigate</span>
+        <span>ENTER select</span>
+        <span>ESC close</span>
+      </div>
+    </div>
+  </div>
+
   <footer class="footer">
-    <p>
-      © 2026 Vasanth S — ECE • Computer Vision • Embedded IoT • Full-Stack Engineering
-    </p>
-
-    <a href="#top" class="back-to-top" id="backToTopLink">
-      ↑ Return to Top
-    </a>
+    <p>© 2026 Vasanth S</p>
+    <p>ECE × Computer Vision × Embedded IoT × Full-Stack</p>
+    <a href="#top">Return to top ↑</a>
   </footer>
-
-  <!-- =========================================================
-       RESUME MODAL
-  ========================================================== -->
-  <div class="modal-overlay" id="resumeModal" aria-hidden="true">
-    <div
-      class="modal-content panel"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="modalTitle"
-    >
-      <button
-        class="modal-close"
-        id="closeResumeModal"
-        aria-label="Close Resume Modal"
-      >
-        &times;
-      </button>
-
-      <div class="modal-header">
-        <h2 id="modalTitle">VASANTH S — Engineering Resume</h2>
-        <p>
-          B.E. Electronics &amp; Communication Engineering | Batch 2025–2029
-        </p>
-      </div>
-
-      <div class="resume-body">
-        <div class="resume-header-info">
-          <div>
-            <h3>VASANTH S</h3>
-            <p>✉️ svasanth2508@gmail.com</p>
-            <p>
-              🌐 linkedin.com/in/vasanth-sakthivel-05ba25396 |
-              github.com/svasanth2508
-            </p>
-          </div>
-
-          <div class="resume-batch-badge">
-            Batch 2025 – 2029
-          </div>
-        </div>
-
-        <hr class="resume-divider" />
-
-        <div class="resume-sec">
-          <h4>PROFILE SUMMARY</h4>
-
-          <p>
-            Electronics and Communication Engineering undergraduate at
-            VSB Engineering College focused on Computer Vision, Artificial
-            Intelligence, Embedded Systems, IoT and Full-Stack Development.
-            Current project work includes video-based ANPR, autonomous
-            incident-analysis software, ESP32 Edge-AI monitoring systems
-            and smart-infrastructure prototypes.
-          </p>
-        </div>
-
-        <div class="resume-sec">
-          <h4>EDUCATIONAL QUALIFICATIONS</h4>
-
-          <div class="resume-edu-block">
-            <div class="resume-edu-header">
-              <strong>
-                Bachelor of Engineering (B.E.) — Electronics &amp;
-                Communication Engineering
-              </strong>
-
-              <span class="resume-year-tag">
-                2025 – 2029
-              </span>
-            </div>
-
-            <p class="resume-institution">
-              VSB Engineering College, Karur, Tamil Nadu
-            </p>
-
-            <p class="resume-score">
-              <strong>Current Academic Performance:</strong>
-              CGPA 8.005 / 10.0
-            </p>
-
-            <p class="resume-coursework">
-              <strong>Core Academic Focus:</strong>
-              Digital Electronics, Signals &amp; Systems, Data Structures,
-              DBMS, Computer Networks, OOP, Microcontrollers and Embedded Systems.
-            </p>
-          </div>
-
-          <div class="resume-edu-block mt-2">
-            <div class="resume-edu-header">
-              <strong>Higher Secondary Certificate (HSC)</strong>
-              <span class="resume-year-tag">2023 – 2025</span>
-            </div>
-
-            <p class="resume-institution">Tamil Nadu State Board</p>
-            <p class="resume-score">
-              <strong>Final Aggregate:</strong> 81.6%
-            </p>
-          </div>
-
-          <div class="resume-edu-block mt-2">
-            <div class="resume-edu-header">
-              <strong>Secondary School Leaving Certificate (SSLC)</strong>
-              <span class="resume-year-tag">2022 – 2023</span>
-            </div>
-
-            <p class="resume-institution">Tamil Nadu State Board</p>
-            <p class="resume-score">
-              <strong>Final Aggregate:</strong> 82.2%
-            </p>
-          </div>
-        </div>
-
-        <div class="resume-sec">
-          <h4>TECHNICAL SKILLS MATRIX</h4>
-
-          <ul class="resume-skills-list">
-            <li>
-              <strong>Programming:</strong>
-              Python, C, C++, Java, JavaScript, TypeScript
-            </li>
-
-            <li>
-              <strong>AI &amp; Computer Vision:</strong>
-              YOLO, PaddleOCR, OpenCV, PyTorch, ML inference
-            </li>
-
-            <li>
-              <strong>Full-Stack:</strong>
-              React, TypeScript, FastAPI, Node.js, Express.js, REST APIs, Vite
-            </li>
-
-            <li>
-              <strong>Embedded &amp; IoT:</strong>
-              ESP32, Arduino, ESP-NOW, MQTT, sensors and edge processing
-            </li>
-
-            <li>
-              <strong>Cloud &amp; Tools:</strong>
-              Git, GitHub, Vercel, Render, Supabase, Postman and VS Code
-            </li>
-          </ul>
-        </div>
-
-        <div class="resume-sec">
-          <h4>WORK EXPERIENCE</h4>
-
-          <div class="resume-exp-block">
-            <p>
-              <strong>Embedded Technologist Intern</strong>
-              — <em>Initz Technology, Coimbatore</em>
-            </p>
-
-            <ul>
-              <li>Worked on embedded hardware and IoT applications.</li>
-              <li>Programmed ESP32 and Arduino microcontrollers.</li>
-              <li>Performed sensor integration and hardware interfacing.</li>
-              <li>Assisted with testing and debugging embedded systems.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="resume-sec">
-          <h4>SELECTED ENGINEERING PROJECTS</h4>
-
-          <div class="resume-exp-block">
-            <p>
-              <strong>PlateScope</strong>
-              — <em>AI-Powered Automatic Number Plate Recognition</em>
-            </p>
-
-            <ul>
-              <li>Built a traffic-video ANPR pipeline using YOLO for plate detection.</li>
-              <li>Integrated PaddleOCR for registration-number recognition.</li>
-              <li>Developed multi-frame observation processing and plate normalization.</li>
-              <li>Built a FastAPI backend and React/TypeScript web interface.</li>
-            </ul>
-          </div>
-
-          <div class="resume-exp-block mt-2">
-            <p>
-              <strong>AstraGuard</strong>
-              — <em>Autonomous Incident Resolution Platform</em>
-            </p>
-
-            <ul>
-              <li>Designed anomaly detection and root-cause analysis workflows.</li>
-              <li>Implemented risk-based remediation decision logic.</li>
-              <li>Built recovery verification and incident-learning concepts.</li>
-            </ul>
-          </div>
-
-          <div class="resume-exp-block mt-2">
-            <p>
-              <strong>RESILIENT_AI_SIH</strong>
-              — <em>ESP32 Edge-AI Monitoring Platform</em>
-            </p>
-
-            <ul>
-              <li>Developed ESP32-based environmental telemetry.</li>
-              <li>Combined edge processing with cloud monitoring.</li>
-              <li>Integrated ESP-NOW communication and risk visualization.</li>
-            </ul>
-          </div>
-
-          <div class="resume-exp-block mt-2">
-            <p>
-              <strong>SECAPMS</strong>
-              — <em>Smart Emergency Corridor System</em>
-            </p>
-
-            <ul>
-              <li>Designed embedded traffic-priority controller concepts.</li>
-              <li>Connected IoT monitoring to a web platform.</li>
-              <li>Explored emergency vehicle priority and traffic coordination.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="resume-sec">
-          <h4>ACHIEVEMENTS &amp; CERTIFICATIONS</h4>
-
-          <ul class="resume-bullet-list">
-            <li>🏆 <strong>Runner-Up</strong> — College Technical Symposium</li>
-            <li>🏀 <strong>State Level Basketball Player</strong></li>
-            <li>📜 <strong>Full Stack Developer Certification</strong> — CSC Computer Education</li>
-            <li>📜 <strong>Basics of Python</strong> — Springboard</li>
-            <li>📜 <strong>Intro to NLP &amp; LLMs</strong> — Springboard</li>
-            <li>📜 <strong>Prompt Engineering Certification</strong> — B10X</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="modal-actions">
-        <button class="btn btn-primary" id="downloadResumeBtn">
-          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
-          </svg>
-          Download Resume
-        </button>
-
-        <button class="btn btn-secondary" id="printResumeBtn">
-          <svg class="btn-icon" viewBox="0 0 24 24" aria-hidden="true">
-            <polyline points="6 9 6 2 18 2 18 9"></polyline>
-            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-            <rect x="6" y="14" width="12" height="8"></rect>
-          </svg>
-          Print / Save PDF
-        </button>
-
-        <button class="btn btn-ghost" id="closeResumeModalBtn">
-          Close
-        </button>
-      </div>
-
-      <p
-        class="form-status mt-2"
-        id="resumeStatus"
-        role="status"
-        aria-live="polite"
-      ></p>
-    </div>
-  </div>
-
-  <!-- =========================================================
-       SECAPMS ARCHITECTURE MODAL
-  ========================================================== -->
-  <div class="modal-overlay" id="secapmsModal" aria-hidden="true">
-    <div
-      class="modal-content panel"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby="secTitle"
-    >
-      <button
-        class="modal-close"
-        id="closeSecapmsModal"
-        aria-label="Close Architecture Modal"
-      >
-        &times;
-      </button>
-
-      <div class="modal-header">
-        <h2 id="secTitle">
-          SECAPMS — System Architecture &amp; Data Flow
-        </h2>
-
-        <p>
-          Smart Emergency Corridor &amp; Ambulance Priority Management System
-        </p>
-      </div>
-
-      <div class="secapms-modal-body">
-        <div class="arch-diagram">
-          <div class="arch-box">
-            <span class="arch-tag">AMBULANCE UNIT</span>
-            <h4>Location / Priority Source</h4>
-            <p>
-              Sends emergency vehicle position and priority information
-              toward the coordination layer.
-            </p>
-          </div>
-
-          <div class="arch-arrow">➔</div>
-
-          <div class="arch-box highlight">
-            <span class="arch-tag">COORDINATION LAYER</span>
-            <h4>Cloud / Web Platform</h4>
-            <p>
-              Evaluates route and junction information and forwards
-              priority commands to the relevant traffic controller.
-            </p>
-          </div>
-
-          <div class="arch-arrow">➔</div>
-
-          <div class="arch-box">
-            <span class="arch-tag">TRAFFIC JUNCTION</span>
-            <h4>ESP32 Priority Controller</h4>
-            <p>
-              Embedded controller represents the traffic-signal
-              priority and emergency-corridor actuation layer.
-            </p>
-          </div>
-        </div>
-
-        <p class="arch-desc">
-          SECAPMS is a prototype smart-infrastructure concept for coordinating
-          emergency vehicle priority using embedded control, IoT communication
-          and real-time monitoring.
-        </p>
-      </div>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>
