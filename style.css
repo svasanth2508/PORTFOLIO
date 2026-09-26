@@ -557,8 +557,11 @@ body {
 .mini-card p { color: var(--muted); font-size: 0.88rem; margin-top: 6px; line-height: 1.6; }
 
 /* SKILLS MATRIX */
-.skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-.skill-card { padding: 24px; }
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}.skill-card { padding: 24px; }
 .skill-icon-header { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
 .skill-svg { width: 22px; height: 22px; stroke: var(--signal); fill: none; stroke-width: 2; }
 .skill-card h3 { font-family: var(--font-display); font-size: 1.15rem; }
@@ -1203,6 +1206,180 @@ body.light .arch-box {
 .delay-3 { transition-delay: 0.24s; }
 
 .hidden-project { display: none !important; }
+/* ==========================================================
+   2026 PORTFOLIO UPDATE
+   AI / COMPUTER VISION / EMBEDDED / FULL STACK
+========================================================== */
+
+
+/* ----------------------------------------------------------
+   FEATURED PROJECT
+---------------------------------------------------------- */
+
+.project-featured {
+  grid-column: span 2;
+  border-color: var(--line-bright);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 225, 255, 0.08),
+      rgba(0, 114, 255, 0.03)
+    ),
+    var(--panel);
+}
+
+.project-featured::after {
+  content: "CURRENT FLAGSHIP";
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+
+  color: var(--signal);
+
+  opacity: 0.6;
+}
+
+
+.project-primary-link {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 13px;
+
+  border: 1px solid var(--signal);
+  border-radius: 6px;
+
+  background: var(--signal-soft);
+
+  font-weight: 600;
+}
+
+
+.project-primary-link:hover {
+  text-decoration: none;
+
+  background: rgba(0, 225, 255, 0.18);
+
+  box-shadow:
+    0 0 14px rgba(0, 225, 255, 0.15);
+}
+
+
+/* ----------------------------------------------------------
+   GITHUB STACK
+---------------------------------------------------------- */
+
+.gh-stack-section {
+  margin-top: 20px;
+}
+
+
+.gh-stack-section h4 {
+  margin-bottom: 12px;
+
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+
+  color: var(--text);
+}
+
+
+.github-stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 8px;
+}
+
+
+.github-stack-tags span {
+  padding: 5px 10px;
+
+  border: 1px solid var(--line);
+  border-radius: 6px;
+
+  background: var(--signal-soft);
+
+  color: var(--signal);
+
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+
+/* ----------------------------------------------------------
+   BETTER PROJECT CARD HOVER
+---------------------------------------------------------- */
+
+.project-card {
+  isolation: isolate;
+}
+
+
+.project-card:hover {
+  transform: translateY(-6px);
+
+  border-color: var(--signal);
+
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.35),
+    0 0 24px rgba(0, 225, 255, 0.08);
+}
+
+
+/* ----------------------------------------------------------
+   MOBILE / TABLET
+---------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+@media (max-width: 850px) {
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-featured {
+    grid-column: span 1;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-featured {
+    grid-column: span 1;
+  }
+
+  .gh-stats-row {
+    grid-template-columns: 1fr;
+  }
+
+  .project-links {
+    flex-wrap: wrap;
+  }
+
+}
 
 /* MEDIA QUERIES */
 @media (max-width: 980px) {
