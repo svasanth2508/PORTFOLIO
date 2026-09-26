@@ -1,6 +1,12 @@
 {
-  "name": "Vasanth S - Portfolio",
-  "description": "Portfolio of Vasanth S, an Electronics & Communication Engineering student building full-stack web platforms and IoT/embedded systems.",
+  "name": "Vasanth S - AI, Computer Vision, Embedded & Full-Stack Portfolio",
+  "description": "Engineering portfolio of Vasanth S, an Electronics and Communication Engineering undergraduate building AI, computer vision, embedded IoT and full-stack systems including PlateScope, AstraGuard, RESILIENT_AI_SIH and SECAPMS.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "ARTIFICIAL_INTELLIGENCE",
+    "COMPUTER_VISION",
+    "EMBEDDED_SYSTEMS",
+    "IOT",
+    "FULL_STACK_DEVELOPMENT"
+  ]
 }
