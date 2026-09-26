@@ -179,76 +179,169 @@ if (closeResumeModalBtn) closeResumeModalBtn.addEventListener('click', closeResu
 if (closeResumeModalBtn2) closeResumeModalBtn2.addEventListener('click', closeResume);
 
 function generateResumeDocument() {
-  return `================================================================================
-VASANTH S — RESUME
-Electronics & Communication Engineering (ECE) Student
-Email: svasanth2508@gmail.com | Phone / WhatsApp: +91 73057 53500
-LinkedIn: https://linkedin.com/in/vasanth-sakthivel-05ba25396
-GitHub: https://github.com/svasanth2508
-College: VSB Engineering College, Karur, Tamil Nadu (Batch 2025 – 2029)
+
+  return `
+================================================================================
+VASANTH S
+ELECTRONICS & COMMUNICATION ENGINEERING UNDERGRADUATE
+AI • COMPUTER VISION • EMBEDDED IoT • FULL-STACK
 ================================================================================
 
-PROFILE SUMMARY
+Email:
+svasanth2508@gmail.com
+
+GitHub:
+https://github.com/svasanth2508
+
+LinkedIn:
+https://linkedin.com/in/vasanth-sakthivel-05ba25396
+
+Institution:
+VSB Engineering College, Karur, Tamil Nadu
+
+Degree:
+B.E. Electronics & Communication Engineering
+
+Batch:
+2025 – 2029
+
+Current CGPA:
+8.005 / 10.0
+
+
+PROFILE
 --------------------------------------------------------------------------------
-Motivated Electronics & Communication Engineering (ECE) student at VSB Engineering College
-(Batch 2025–2029) with strong expertise in Embedded Systems, Full-Stack Web Development,
-IoT Hardware, AI, and Smart City Technologies. Proven track record of designing hardware-
-to-cloud systems—highlighted by SECAPMS (Smart Emergency Corridor & Ambulance Priority
-Management System) for Smart India Hackathon (SIH)—and developing real-time edge devices
-using ESP32, C++, Node.js, Express, and cloud databases.
 
-EDUCATIONAL QUALIFICATIONS
+Electronics and Communication Engineering undergraduate focused on building
+intelligent engineering systems across Artificial Intelligence, Computer Vision,
+Embedded Systems, IoT and Full-Stack Development.
+
+Hands-on project experience includes AI-powered video analytics, automatic
+number plate recognition, autonomous incident-resolution software,
+ESP32 Edge-AI telemetry systems and smart-infrastructure applications.
+
+
+TECHNICAL SKILLS
 --------------------------------------------------------------------------------
-1. Bachelor of Engineering (B.E.) — Electronics & Communication Engineering (2025 – 2029)
-   Institution: VSB Engineering College, Karur, Tamil Nadu
-   Current CGPA: 8.005 / 10.0
-   Core Coursework: Data Structures & Algorithms (DSA), DBMS, Operating Systems (OS),
-   Computer Networks, Microcontrollers & Embedded Hardware, OOP.
 
-2. Higher Secondary Certificate (HSC - Class XII) (2023 – 2025)
-   Board: Tamil Nadu State Board
-   Aggregate Percentage: 81.2%
+Programming:
+Python, C, C++, Java, JavaScript, TypeScript
 
-3. Secondary School Leaving Certificate (SSLC - Class X) (2022 – 2023)
-   Board: Tamil Nadu State Board
-   Aggregate Percentage: 82.0%
+AI & Computer Vision:
+YOLO, PaddleOCR, OpenCV, PyTorch, Machine Learning Inference
 
-TECHNICAL SKILLS MATRIX
+Full-Stack:
+React, TypeScript, FastAPI, Node.js, Express.js, REST APIs, Vite
+
+Embedded & IoT:
+ESP32, Arduino, ESP-NOW, MQTT, Sensor Integration, Edge Processing
+
+Cloud & Tools:
+Git, GitHub, Vercel, Render, Supabase, Postman, VS Code
+
+
+EDUCATION
 --------------------------------------------------------------------------------
-* Programming Languages: Python, C, C++, Java, JavaScript (ES6+)
-* Web & Full-Stack Tech: HTML5, CSS3, React.js, Node.js, Express.js, Firebase
-* Hardware & IoT Systems: ESP32 Microcontrollers, Arduino UNO, MQTT Communication,
-  Ultrasonic Sensors, OLED Displays, Relays & Circuit Optimization
-* Databases & Tools: MongoDB, MySQL, Git, GitHub, VS Code, Arduino IDE, Postman, Vercel
-* Core CS & ECE Concepts: Data Structures & Algorithms (DSA), DBMS, OS, Computer Networks
 
-WORK EXPERIENCE & MAJOR PROJECTS
+Bachelor of Engineering
+Electronics & Communication Engineering
+
+VSB Engineering College
+Karur, Tamil Nadu
+
+2025 – 2029
+
+Current CGPA:
+8.005 / 10.0
+
+
+EXPERIENCE
 --------------------------------------------------------------------------------
-* Embedded Technologist Intern — Initz Technology, Coimbatore
-  - Engineered embedded hardware applications and sensor telemetry pipelines.
-  - Programmed microcontrollers (ESP32, Arduino) and tested multi-sensor hardware interfacing.
-  - Assisted in circuit design optimization, hardware debugging, and real-time sensor calibration.
 
-* Flagship SIH Project: SECAPMS — Smart Emergency Corridor & Ambulance Priority Management System
-  - Smart India Hackathon (SIH) Hardware + IoT + AI + Full-Stack Emergency System.
-  - Designed automated traffic signal priority controllers using ESP32 edge hardware modules.
-  - Built real-time ambulance tracking dashboard with live GPS tracking, priority dispatch, and hospital network integration.
-  - Engineered to reduce ambulance traffic delays in urban centers by up to 65%.
+Embedded Technologist Intern
+Initz Technology, Coimbatore
 
-ACHIEVEMENTS & CERTIFICATIONS
+• Worked on embedded systems and IoT applications.
+• Developed experience with ESP32 and Arduino microcontrollers.
+• Performed sensor integration and hardware interfacing.
+• Assisted with testing, debugging and embedded-system development.
+
+
+SELECTED ENGINEERING PROJECTS
 --------------------------------------------------------------------------------
-* Smart India Hackathon (SIH) Participant — Lead Architect for SECAPMS Project
-* Runner-Up — College Technical Symposium
-* State Level Basketball Player — Represented school/district at Tamil Nadu State Level
-* Full Stack Developer Certification — CSC Computer Education
-* Basics of Python — Springboard Certification
-* Intro to NLP & LLMs — Springboard Certification
-* B10X Prompt Engineering Certification — B10X Platform
+
+
+1. PLATESCOPE — AI-POWERED ANPR PLATFORM
+
+Repository:
+https://github.com/svasanth2508/PlateScope
+
+AI-powered Automatic Number Plate Recognition platform that processes traffic
+video, detects license plates using YOLO, recognizes registration numbers using
+PaddleOCR and combines repeated observations across multiple frames.
+
+Technology:
+Python, YOLO, PaddleOCR, OpenCV, FastAPI, React, TypeScript
+
+
+2. ASTRAGUARD
+
+Repository:
+https://github.com/svasanth2508/AstraGuard
+
+Live:
+https://astraguard-eight.vercel.app
+
+Autonomous enterprise incident-resolution platform designed to detect anomalies,
+perform root-cause analysis, evaluate remediation risk, execute safe actions,
+verify recovery and learn from confirmed incidents.
+
+
+3. RESILIENT_AI_SIH
+
+Repository:
+https://github.com/svasanth2508/RESILIENT_AI_SIH
+
+Live:
+https://resilient-ai-sih.vercel.app
+
+ESP32 Edge-AI environmental monitoring system combining embedded telemetry,
+edge processing and a cloud-connected monitoring dashboard.
+
+
+4. SECAPMS — SMART EMERGENCY CORRIDOR
+
+Repository:
+https://github.com/svasanth2508/secapms-project
+
+Live:
+https://secapms-project.vercel.app
+
+Smart Emergency Corridor and Ambulance Priority Management System designed
+around embedded traffic-priority controllers and a real-time monitoring
+platform.
+
+
+ENGINEERING INTERESTS
+--------------------------------------------------------------------------------
+
+• Artificial Intelligence
+• Computer Vision
+• Embedded Systems
+• Internet of Things
+• Edge Intelligence
+• Full-Stack Development
+• Intelligent Automation
+• Real-Time Systems
+
+
 ================================================================================
-Generated on ${new Date().toLocaleDateString()} — Vasanth S Official Portfolio System`;
-}
+Generated ${new Date().toLocaleDateString()}
+Vasanth S Engineering Portfolio
+================================================================================
+`;
 
-if (downloadResumeBtn) {
+}if (downloadResumeBtn) {
   downloadResumeBtn.addEventListener('click', () => {
     try {
       const content = generateResumeDocument();
